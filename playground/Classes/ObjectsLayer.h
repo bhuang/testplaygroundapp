@@ -7,6 +7,8 @@
 //
 
 #import "cocos2d.h"
+#import "CCAnimation.h"
+#import "CCAnimatedSprite.h"
 
 @interface ObjectsLayer : CCScene
 

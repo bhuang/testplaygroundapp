@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D7543D9195109FC0071DDD9 /* AnimBear-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D7543D5195109FC0071DDD9 /* AnimBear-hd.plist */; };
+		6D7543DA195109FC0071DDD9 /* AnimBear-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7543D6195109FC0071DDD9 /* AnimBear-hd.png */; };
+		6D7543DB195109FC0071DDD9 /* AnimBear.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D7543D7195109FC0071DDD9 /* AnimBear.plist */; };
+		6D7543DC195109FC0071DDD9 /* AnimBear.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7543D8195109FC0071DDD9 /* AnimBear.png */; };
+		6D7543DF195122D90071DDD9 /* CCAnimatedSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7543DE195122D90071DDD9 /* CCAnimatedSprite.m */; };
 		6D78A19919477D11001060A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D78A19819477D11001060A7 /* QuartzCore.framework */; };
 		6D78A19B19477D11001060A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D78A19A19477D11001060A7 /* OpenGLES.framework */; };
 		6D78A19D19477D11001060A7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D78A19C19477D11001060A7 /* OpenAL.framework */; };
@@ -216,7 +221,6 @@
 		6D78A45619478946001060A7 /* GridLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A45519478946001060A7 /* GridLayer.m */; };
 		6D78A4591947C3E0001060A7 /* ObjectsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A4581947C3E0001060A7 /* ObjectsLayer.m */; };
 		6D78A45C1947CD42001060A7 /* MapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A45B1947CD42001060A7 /* MapObject.m */; };
-		6D78A45F1947E65D001060A7 /* Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A45E1947E65D001060A7 /* Avatar.m */; };
 		6D78A463194A1E7F001060A7 /* map_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D78A460194A1E7F001060A7 /* map_bg_01.jpg */; };
 		6D78A464194A1E7F001060A7 /* map_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D78A461194A1E7F001060A7 /* map_bg_03.jpg */; };
 		6D78A465194A1E7F001060A7 /* map_bg_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D78A462194A1E7F001060A7 /* map_bg_02.jpg */; };
@@ -233,6 +237,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D7543D5195109FC0071DDD9 /* AnimBear-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AnimBear-hd.plist"; path = "Resources/AnimBear-hd.plist"; sourceTree = "<group>"; };
+		6D7543D6195109FC0071DDD9 /* AnimBear-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AnimBear-hd.png"; path = "Resources/AnimBear-hd.png"; sourceTree = "<group>"; };
+		6D7543D7195109FC0071DDD9 /* AnimBear.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AnimBear.plist; path = Resources/AnimBear.plist; sourceTree = "<group>"; };
+		6D7543D8195109FC0071DDD9 /* AnimBear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AnimBear.png; path = Resources/AnimBear.png; sourceTree = "<group>"; };
+		6D7543DD195122D90071DDD9 /* CCAnimatedSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAnimatedSprite.h; sourceTree = "<group>"; };
+		6D7543DE195122D90071DDD9 /* CCAnimatedSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimatedSprite.m; sourceTree = "<group>"; };
 		6D78A19519477D11001060A7 /* playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D78A19819477D11001060A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6D78A19A19477D11001060A7 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -669,8 +679,6 @@
 		6D78A4581947C3E0001060A7 /* ObjectsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectsLayer.m; path = Classes/ObjectsLayer.m; sourceTree = "<group>"; };
 		6D78A45A1947CD42001060A7 /* MapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObject.h; sourceTree = "<group>"; };
 		6D78A45B1947CD42001060A7 /* MapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapObject.m; sourceTree = "<group>"; };
-		6D78A45D1947E65D001060A7 /* Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Avatar.h; path = Classes/Avatar.h; sourceTree = "<group>"; };
-		6D78A45E1947E65D001060A7 /* Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Avatar.m; path = Classes/Avatar.m; sourceTree = "<group>"; };
 		6D78A460194A1E7F001060A7 /* map_bg_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map_bg_01.jpg; sourceTree = "<group>"; };
 		6D78A461194A1E7F001060A7 /* map_bg_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map_bg_03.jpg; sourceTree = "<group>"; };
 		6D78A462194A1E7F001060A7 /* map_bg_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map_bg_02.jpg; sourceTree = "<group>"; };
@@ -745,6 +753,10 @@
 		6D78A1B119477D11001060A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D7543D5195109FC0071DDD9 /* AnimBear-hd.plist */,
+				6D7543D6195109FC0071DDD9 /* AnimBear-hd.png */,
+				6D7543D7195109FC0071DDD9 /* AnimBear.plist */,
+				6D7543D8195109FC0071DDD9 /* AnimBear.png */,
 				6D78A460194A1E7F001060A7 /* map_bg_01.jpg */,
 				6D78A461194A1E7F001060A7 /* map_bg_03.jpg */,
 				6D78A462194A1E7F001060A7 /* map_bg_02.jpg */,
@@ -1578,8 +1590,8 @@
 				6D78A4581947C3E0001060A7 /* ObjectsLayer.m */,
 				6D78A45A1947CD42001060A7 /* MapObject.h */,
 				6D78A45B1947CD42001060A7 /* MapObject.m */,
-				6D78A45D1947E65D001060A7 /* Avatar.h */,
-				6D78A45E1947E65D001060A7 /* Avatar.m */,
+				6D7543DD195122D90071DDD9 /* CCAnimatedSprite.h */,
+				6D7543DE195122D90071DDD9 /* CCAnimatedSprite.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1663,20 +1675,24 @@
 				6D78A1BC19477D11001060A7 /* Icon.png in Resources */,
 				6D78A1CA19477D11001060A7 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				6D78A1B919477D11001060A7 /* Default-Landscape~ipad.png in Resources */,
+				6D7543D9195109FC0071DDD9 /* AnimBear-hd.plist in Resources */,
 				6D78A1CE19477D11001060A7 /* Icon-Small.png in Resources */,
 				6D78A1CC19477D11001060A7 /* Icon-Small-50.png in Resources */,
 				6D78A465194A1E7F001060A7 /* map_bg_02.jpg in Resources */,
 				6D78A3B519477D12001060A7 /* LICENSE_Kazmath.txt in Resources */,
 				6D78A464194A1E7F001060A7 /* map_bg_03.jpg in Resources */,
+				6D7543DA195109FC0071DDD9 /* AnimBear-hd.png in Resources */,
 				6D78A1C019477D11001060A7 /* Icon-72.png in Resources */,
 				6D78A30E19477D12001060A7 /* LICENSE_cocos2d.txt in Resources */,
 				6D78A1B719477D11001060A7 /* Default-568h@2x.png in Resources */,
 				6D78A1D719477D11001060A7 /* iTunesArtwork in Resources */,
+				6D7543DC195109FC0071DDD9 /* AnimBear.png in Resources */,
 				6D78A1D219477D11001060A7 /* Icon-Spotlight-iOS7.png in Resources */,
 				6D78A1C619477D11001060A7 /* Icon-76@2x.png in Resources */,
 				6D78A43A19477D13001060A7 /* LICENSE_Chipmunk.txt in Resources */,
 				6D78A1D419477D11001060A7 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				6D78A1C419477D11001060A7 /* Icon-76.png in Resources */,
+				6D7543DB195109FC0071DDD9 /* AnimBear.plist in Resources */,
 				6D78A39A19477D12001060A7 /* ChangeLog in Resources */,
 				6D78A1D919477D11001060A7 /* iTunesArtwork@2x in Resources */,
 			);
@@ -1782,6 +1798,7 @@
 				6D78A26819477D11001060A7 /* CCRenderTexture.m in Sources */,
 				6D78A45C1947CD42001060A7 /* MapObject.m in Sources */,
 				6D78A1EE19477D11001060A7 /* CCActionManager.m in Sources */,
+				6D7543DF195122D90071DDD9 /* CCAnimatedSprite.m in Sources */,
 				6D78A29219477D11001060A7 /* CCSprite9Slice.m in Sources */,
 				6D78A2A419477D12001060A7 /* CCTextureAtlas.m in Sources */,
 				6D78A36519477D12001060A7 /* OALAudioFile.m in Sources */,
@@ -1790,7 +1807,6 @@
 				6D78A2B119477D12001060A7 /* CCTiledMapLayer.m in Sources */,
 				6D78A44519477D13001060A7 /* HelloWorldScene.m in Sources */,
 				6D78A3A519477D12001060A7 /* neon_matrix_impl.c in Sources */,
-				6D78A45F1947E65D001060A7 /* Avatar.m in Sources */,
 				6D78A22A19477D11001060A7 /* CCLabelTTF.m in Sources */,
 				6D78A2DF19477D12001060A7 /* NSEvent+CC.m in Sources */,
 				6D78A33C19477D12001060A7 /* ALDevice.m in Sources */,

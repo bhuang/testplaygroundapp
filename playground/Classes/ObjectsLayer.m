@@ -7,11 +7,10 @@
 //
 
 #import "ObjectsLayer.h"
-#import "Avatar.h"
 
 @implementation ObjectsLayer {
     NSMutableArray *objects;
-    
+    CCAnimatedSprite *bear;
 }
 
 + (ObjectsLayer *)scene
@@ -31,13 +30,19 @@
     
     objects= [NSMutableArray array];
     
-    CCSprite *sprite = [Avatar spriteWithImageNamed:@"Icon-Small.png"];
     
-    sprite.position= ccp(50.0f, 100.0f);
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"AnimBear.plist"];
     
-    [objects addObject:sprite];
+    CCSpriteBatchNode *spriteSheet = [CCSpriteBatchNode batchNodeWithFile:@"AnimBear.png"];
     
-    [self addChild:sprite];
+    [self addChild:spriteSheet];
+    
+    bear= [CCAnimatedSprite spriteWithFrames:8];
+    
+    [bear runWalkAnimation];
+    
+    [self addChild:bear];
+    
     
     return self;
 }

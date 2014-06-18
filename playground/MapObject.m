@@ -45,7 +45,9 @@
     
     objects= [ObjectsLayer scene];
     
-    //[self addChild:objects z:0 name:@"objects"];
+    objects.position= CGPointMake(startX, startY);
+    
+    [self addChild:objects z:0 name:@"objects"];
     
     
     return self;
