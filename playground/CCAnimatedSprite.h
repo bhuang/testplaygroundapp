@@ -7,9 +7,19 @@
 //
 
 #import "cocos2d.h"
+#import "CCAnimation.h"
+
+@class MapObject;
+
+@protocol CCAnimatedSpriteDelegate
+-(CGPoint)sanitizePointForRect:(CGRect)rect;
+@end
 
 @interface CCAnimatedSprite : CCSprite
-+(CCAnimatedSprite *) spriteWithFrames:(int)frames;
--(CCAnimatedSprite *)initAnimatedSrpiteWithFrames:(int)frames;
+@property (nonatomic, assign) id  delegate;
+
++(CCAnimatedSprite *)spriteWithFrames:(int)frames andDelegate:(MapObject *)mapObject;
+-(CCAnimatedSprite *)initAnimatedSrpiteWithFrames:(int)frames andDelegate:(MapObject *)mapObject;
 -(void)runWalkAnimation;
+-(void)walkToPoint:(CGPoint)point;
 @end

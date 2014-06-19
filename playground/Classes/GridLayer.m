@@ -56,6 +56,16 @@
     return self;
 }
 
+-(BOOL)isPointInMap:(CGPoint)point
+{
+    CGPoint gridCoords= [self getGridCoordinatesWithPointOnMap:point];
+    if(gridCoords.x < 0 || gridCoords.x > (self.edgeSize-1) || gridCoords.y < 0 || gridCoords.y > (self.edgeSize-1))  {
+        //NSLog([NSString stringWithFormat:@"point %f,%f at %f,%f", point.x, point.y, gridCoords.x, gridCoords.y]);
+        return false;
+    }
+    return true;
+}
+
 -(CGPoint)convertPointToIsoPointWithX:(float)curX andY:(float)curY
 {
     if(true) {

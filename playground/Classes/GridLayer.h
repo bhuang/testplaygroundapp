@@ -19,4 +19,5 @@
 + (GridLayer *)sceneWithSize:(int)size andContentWidth:(float)width;
 -(id)initWithEdgeSize:(int)size andContentWidth:(float)width;
 -(CGPoint)getGridCoordinatesWithPointOnMap:(CGPoint)MapPoint;
+-(BOOL)isPointInMap:(CGPoint)point;
 @end

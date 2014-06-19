@@ -7,8 +7,10 @@
 //
 
 #import "CCScene.h"
+#import "CCAnimatedSprite.h"
 
-@interface MapObject : CCScene
+@interface MapObject : CCScene <CCAnimatedSpriteDelegate>
 +(MapObject *)scene;
 -(id)init;
+-(CGPoint)sanitizePointForSprite:(CCSprite *)sprite atPoint:(CGPoint)point;
 @end

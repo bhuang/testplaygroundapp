@@ -7,13 +7,12 @@
 //
 
 #import "MapObject.h"
-#import "ObjectsLayer.h"
 #import "GridLayer.h"
 
 @implementation MapObject {
     CGPoint lastTouchLocation;
     GridLayer * gridMap;
-    ObjectsLayer * objects;
+    CCAnimatedSprite *bear;
     float minScale;
     float maxScale;
 }
@@ -42,15 +41,25 @@
     
     [self addChild:gridMap z:0 name:@"gridmap"];
     
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"AnimBear.plist"];
+    CCSpriteBatchNode *spriteSheet = [CCSpriteBatchNode batchNodeWithFile:@"AnimBear.png"];
     
-    objects= [ObjectsLayer scene];
-    
-    objects.position= CGPointMake(startX, startY);
-    
-    [self addChild:objects z:0 name:@"objects"];
-    
-    
+    [self addChild:spriteSheet];
+    [self addMapObjects];
     return self;
+}
+
+-(void)addMapObjects
+{
+    bear= [CCAnimatedSprite spriteWithFrames:8 andDelegate:self];
+    bear.scale=0.5f;
+    bear.anchorPoint=ccp(0, 0);
+    
+    float startX= self.contentSize.width/2;
+    float startY= (self.contentSize.height - (gridMap.edgeSize * gridMap.gridHeight))/2;
+    bear.position= CGPointMake(startX, startY);
+    
+    [self addChild:bear];
 }
 
 -(void)setupBackground
@@ -90,12 +99,74 @@
     self.position= ccpMult(CGPointMake(startX, startY), -1);
 }
 
+-(CGPoint)sanitizePointForRect:(CGRect)rect {
+    float startX= rect.origin.x;
+    float endX= rect.origin.x + rect.size.width;
+    float startY= rect.origin.y;
+    float endY= rect.origin.y + rect.size.height;
+    
+    CGPoint point;
+    int incrementAmt=10;
+    
+    
+    bool fits= [self gridMapFitsRect:rect.size atPoint:rect.origin];
+    int i=incrementAmt;
+    
+    if(fits) {
+        point= rect.origin;
+    } else {
+        while(!fits) {
+            for(int x=(i*-1); x<=i; x+=incrementAmt) {
+                for(int y=(i*-1); y<=i; y+=incrementAmt) {
+                    CGPoint delta= ccp(x,y);
+                    CGPoint newPoint= ccpAdd(rect.origin, ccp(x,y));
+                    if([self gridMapFitsRect:rect.size atPoint:newPoint]) {
+                        fits=true;
+                        point= newPoint;
+                        NSLog([NSString stringWithFormat:@"found fit at %f,%f delta was %f,%f", newPoint.x, newPoint.y, delta.x, delta.y]);
+                    }
+                }
+            }
+            i+=incrementAmt;
+        }
+    }
+    return point;
+    
+}
+
+-(bool)gridMapFitsRect:(CGSize)rectSize atPoint:(CGPoint)point {
+    float startX= point.x;
+    float endX= point.x + rectSize.width;
+    float startY= point.y;
+    float endY= point.y + rectSize.height;
+    
+    
+    if(![gridMap isPointInMap:ccp(startX, startY)]) {
+        return false;
+    } else if(![gridMap isPointInMap:ccp(startX, endY)]) {
+        return false;
+    } else if(![gridMap isPointInMap:ccp(endX, startY)]) {
+        return false;
+    } else if(![gridMap isPointInMap:ccp(endX, endY)]) {
+        return false;
+    } else {
+       return true;
+    }
+}
+
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     if([[event allTouches] count]==1) {
         CGPoint touchLocation= [touch locationInNode:self];
         CGPoint GridCoord= [gridMap getGridCoordinatesWithPointOnMap:touchLocation];
+        
+        [self moveSelectedObjectToPoint:touchLocation];
+        
         NSLog([NSString stringWithFormat:@"GridCoord on %f, %f", GridCoord.x, GridCoord.y]);
     }
+}
+
+-(void)moveSelectedObjectToPoint:(CGPoint)point {
+    [bear walkToPoint:point];
 }
 
 -(void)setPositionForMapWithCoordX:(float)CoordX andCoordY:(float)CoordY
@@ -119,7 +190,6 @@
     self.position= ccp(CoordX, CoordY);
     
     //NSLog([NSString stringWithFormat:@"new position %f, %f", self.position.x, self.position.y]);
-
 }
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event

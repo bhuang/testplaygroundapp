@@ -14,5 +14,5 @@
 
 +(ObjectsLayer *)scene;
 -(id) init;
-
+-(void)moveSelectedObjectToPoint:(CGPoint)point;
 @end

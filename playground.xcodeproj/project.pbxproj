@@ -219,7 +219,6 @@
 		6D78A44819477D13001060A7 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A44719477D13001060A7 /* IntroScene.m */; };
 		6D78A453194781AE001060A7 /* MapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A452194781AE001060A7 /* MapScene.m */; };
 		6D78A45619478946001060A7 /* GridLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A45519478946001060A7 /* GridLayer.m */; };
-		6D78A4591947C3E0001060A7 /* ObjectsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A4581947C3E0001060A7 /* ObjectsLayer.m */; };
 		6D78A45C1947CD42001060A7 /* MapObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78A45B1947CD42001060A7 /* MapObject.m */; };
 		6D78A463194A1E7F001060A7 /* map_bg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D78A460194A1E7F001060A7 /* map_bg_01.jpg */; };
 		6D78A464194A1E7F001060A7 /* map_bg_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6D78A461194A1E7F001060A7 /* map_bg_03.jpg */; };
@@ -675,8 +674,6 @@
 		6D78A452194781AE001060A7 /* MapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapScene.m; path = Classes/MapScene.m; sourceTree = "<group>"; };
 		6D78A45419478946001060A7 /* GridLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridLayer.h; path = Classes/GridLayer.h; sourceTree = "<group>"; };
 		6D78A45519478946001060A7 /* GridLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridLayer.m; path = Classes/GridLayer.m; sourceTree = "<group>"; };
-		6D78A4571947C3E0001060A7 /* ObjectsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectsLayer.h; path = Classes/ObjectsLayer.h; sourceTree = "<group>"; };
-		6D78A4581947C3E0001060A7 /* ObjectsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectsLayer.m; path = Classes/ObjectsLayer.m; sourceTree = "<group>"; };
 		6D78A45A1947CD42001060A7 /* MapObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapObject.h; sourceTree = "<group>"; };
 		6D78A45B1947CD42001060A7 /* MapObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapObject.m; sourceTree = "<group>"; };
 		6D78A460194A1E7F001060A7 /* map_bg_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map_bg_01.jpg; sourceTree = "<group>"; };
@@ -1586,8 +1583,6 @@
 				6D78A452194781AE001060A7 /* MapScene.m */,
 				6D78A45419478946001060A7 /* GridLayer.h */,
 				6D78A45519478946001060A7 /* GridLayer.m */,
-				6D78A4571947C3E0001060A7 /* ObjectsLayer.h */,
-				6D78A4581947C3E0001060A7 /* ObjectsLayer.m */,
 				6D78A45A1947CD42001060A7 /* MapObject.h */,
 				6D78A45B1947CD42001060A7 /* MapObject.m */,
 				6D7543DD195122D90071DDD9 /* CCAnimatedSprite.h */,
@@ -1791,7 +1786,6 @@
 				6D78A29C19477D12001060A7 /* CCSpriteFrameCache.m in Sources */,
 				6D78A35B19477D12001060A7 /* mach_timing.c in Sources */,
 				6D78A33F19477D12001060A7 /* ALListener.m in Sources */,
-				6D78A4591947C3E0001060A7 /* ObjectsLayer.m in Sources */,
 				6D78A21819477D11001060A7 /* ccFPSImages.m in Sources */,
 				6D78A2EF19477D12001060A7 /* ccUtils.c in Sources */,
 				6D78A26019477D11001060A7 /* CCPhysicsShape.m in Sources */,
